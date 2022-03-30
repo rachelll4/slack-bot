@@ -1,6 +1,8 @@
 # This is a basic workflow to help you get started with Actions
 
 name: run-sonic-bot
+env: 
+  SLACK_API_TOKEN: ${{ secrets.SLACK_API_KEY }}
 
 # Controls when the workflow will run
 on:
@@ -34,7 +36,5 @@ jobs:
           pip install datetime slackclient slack
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        env:
-          SLACK_API_TOKEN: ${{ secrets.SLACK_API_KEY }}
+      - name: run, sonic, run
         run: python sonic-bot.py
