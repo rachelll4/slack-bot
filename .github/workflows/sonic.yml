@@ -31,7 +31,7 @@ jobs:
       - name: install python packages
         run: |
           python -m pip install --upgrade pip
-          pip install datetime os slackclient slack
+          pip install datetime slackclient slack
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
