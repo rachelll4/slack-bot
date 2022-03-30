@@ -25,4 +25,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
+        env:
+          SLACK_API_TOKEN: SLACK_API_TOKEN
         run: sonic-bot.py
