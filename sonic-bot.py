@@ -6,7 +6,7 @@ from slack.errors import SlackApiError
 slack_token = os.environ["SLACK_API_TOKEN"]
 client = WebClient(token = slack_token)
 
-sonic_release = datetime.datetime(2022,4,8)
+sonic_release = datetime(2022,4,8)
 time_to_release = sonic_release - date.today()
 
 
