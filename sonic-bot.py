@@ -7,7 +7,7 @@ slack_token = os.environ["SLACK_API_TOKEN"]
 client = WebClient(token = slack_token)
 
 sonic_release = datetime(2022,4,8)
-time_to_release = sonic_release - date.today()
+time_to_release = sonic_release - datetime(date.today().year,date.today().month, date.today().day)
 
 
 if (time_to_release > 0):
