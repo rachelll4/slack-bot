@@ -36,5 +36,5 @@ jobs:
       # Runs a single command using the runners shell
       - name: run, sonic, run
         env:
-          SLACK_API_TOKEN: ${{ secrets.SLACK_API_KEY }}
+          SLACK_API_TOKEN: ${{ secrets.SLACK_API_TOKEN }}
         run: python sonic-bot.py
