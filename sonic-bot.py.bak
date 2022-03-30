@@ -9,13 +9,10 @@ client = WebClient(token = slack_token)
 sonic_release = datetime(2022,4,8)
 time_to_release = sonic_release - datetime(date.today().year,date.today().month, date.today().day)
 
-print(time_to_release.days)
-
 if (time_to_release.days > 0):
     try:
         texty = "Hello from Sonic! There are "+str(time_to_release.days)+ " days until Sonic 2 hits theaters. Gotta go fast"
         for x in range(15 - time_to_release.days):
-            print(x)
             texty = texty+ ":checkered_flag:"
     
         response = client.chat_postMessage(
